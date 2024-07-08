@@ -1,0 +1,63 @@
+// Mixin For Change Background Color Of Navbar List 
+// $name : Class Name Variable Of Item List 
+// $color : Background Color Variable
+  
+@mixin theme($name, $color) {
+    #{$name}{
+        &:hover > .nav-link {
+            background-color: $color;
+            border-top-color: rgba($color, .5);
+        }
+        > .navbar-nav{
+            border-bottom: 2px solid#E5E5E5 ;
+            border-top: 2px solid $color ;
+        }
+        .navbar-nav  {
+            .nav-item {
+                &:hover     {
+                    background-color: $color;
+                } 
+            } 
+        }
+    } 
+}
+
+
+/// Mixin For Change Text Color and Background and Border Color Of Buttons When Hover it  
+
+@mixin border-color($class-name, $color) {
+    #{$class-name} {
+        font-size: 12px;
+        transition: $transition;
+        border: 2px solid $color;
+        &:hover {
+            background: none;
+            color: $color !important;
+        }
+    }
+}
+
+// Mixin For Change icon Color When Hover It 
+
+@mixin icon-color($color){
+    svg,
+    i {
+        transition: $transition;
+        &:hover {
+            color: $color;
+        }
+    }
+}
+
+/// Mixin For Change Color and Background and Border Color Of icon Social When Hover it  
+
+@mixin social-color($class-name, $color, $bgColor) {
+    #{$class-name} {
+        transition: $transition;
+        border: 1px solid $color;
+        &:hover {
+            background: $bgColor  !important;
+            color: $color !important;
+        }
+    }
+}

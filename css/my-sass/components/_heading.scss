@@ -1,0 +1,29 @@
+.special-heading {
+    span {
+        position: relative;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 1px;
+            background-color: black;
+            top: 50%;
+            transform: translateY(-50%);
+            @media (max-width: 575px) {
+                display: none;
+            }
+        }
+        &::before {
+            margin-left: -85px;
+        }
+        &::after {
+            margin-left: 25px;
+        }
+    }
+    h2 {
+        font-family: "Amatic SC", sans-serif;
+        font-weight: 400;
+
+    }
+}

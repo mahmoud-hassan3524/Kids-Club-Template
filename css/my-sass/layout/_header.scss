@@ -1,0 +1,67 @@
+/* Start Upper Bar */
+.upper-bar {
+    font-size: 12px;
+    .social {
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+        @include social-color('.facebook', $blueColor, none);
+        @include social-color('.instagram', $greenColor, none);
+        @include social-color('.twitter', $redColor, none);
+        @include social-color('.pinterest', $yellowColor, none);
+        @include social-color('.search', white, black);
+    }
+}
+/* End Upper Bar */
+/* Start Navbar */
+nav {
+    .collapse {
+        .navbar-nav {
+            @include theme('.product-yellow', $yellowColor);
+            @include theme('.product-red', $redColor);
+            @include theme('.product-green', $greenColor);
+            @include theme('.product-blue', $blueColor);
+            .nav-item {
+                position: relative;
+                &:hover > .nav-link {
+                    color: $whiteColor;
+                }
+                &:hover > .navbar-nav {
+                    display: block !important;
+                }
+                .nav-link {
+                    padding-right: 20px;                       
+                }
+                .link {
+                    padding: 20px;
+                    border-top: 4px solid transparent;
+                } 
+                .active {
+                    border-bottom: 4px solid $blueColor;
+                    color: $blueColor;
+                }
+                .navbar-nav {
+                    position: absolute;
+                    right: 0 ;
+                    min-width: 250px;
+                    text-align: end;
+                    z-index: 1;
+                    &:not(:first-child) {
+                        background-color: $whiteColor;
+                    }
+                    .nav-list {
+                        &:not(:first-child) {
+                            right: 100%;
+                            top: 0;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+    
+}
+/* End Navbar */
+
+

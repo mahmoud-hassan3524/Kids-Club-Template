@@ -1,0 +1,224 @@
+/* Start Carousel */
+.carousel {
+    .carousel-indicators {
+        button {
+            width: 8px;
+            height: 8px;
+            background-color: #214C55;
+            border: 7px solid transparent;
+            transition: $transition;
+            &:hover {
+                border-color:#214C55 ;
+            }
+            &.active {
+                border-color: $whiteColor ;
+                background-color: $whiteColor; 
+            }
+        }
+    }
+    .carousel-inner {
+        .first-carousel {
+            background-image: url('../imgs/carousel-1.jpg') ;
+        }
+        .second-carousel {
+            background-image: url('../imgs/carousel-2.jpg') ;
+        }
+        .three-carousel {
+            background-image: url('../imgs/carousel-3.jpg') ;
+        }
+        .carousel-top {
+            background-size: cover;
+            max-width : 100% !important;
+            background-position: center;
+            min-height: 100vh ;
+            .row {
+                .icon {
+                    @include icon-color($yellowColor);
+                }
+            }
+        }
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        background-color: rgba(#000, .5);
+        width: 40px;
+        height: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        &:hover {
+            background-color: #000;
+        }    
+    }
+}
+/* End Carousel */
+/* Start Our Activities */
+.our-activities {
+    .content {
+        .row {
+            .col {
+                @media (max-width: 991px) {
+                    border: 0 !important;
+                }
+                .icon {
+                    @include icon-color(black);
+                }
+                .text {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .staff {
+        .row {
+            .card-body {
+                @include icon-color(black);
+            }
+        }  
+    }
+}
+/* End Our Activities */
+/* Start Statistics */
+.statistics {
+    background-image: url(../imgs/stastistics.jpg);
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    background-attachment: fixed;
+    .special-heading {
+        span {
+            &::before,
+            &::after {
+                background-color: $whiteColor;
+            }
+        }
+    }
+    section {
+        .stat {
+            .icon {
+                @include icon-color(black);
+            }
+        }
+    }
+}
+/* End Statistics */
+/* Start Our Teachers */
+.our-teachers {
+    background-color: #EDEDED;
+    section {
+        .box {
+            .img {
+                position: relative;
+                &:hover > .plus {
+                    display: flex;
+                }
+                .plus {
+                    background-color: rgba(85, 171, 192, .9);
+                    border-radius: 50% ;
+                    width: (100% - 20);
+                    height: (100% - 20);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translatex(-50%) translateY(-50%);
+                    display: none;
+                    transition: $transition;
+                }
+            }
+        }
+        .social {
+            svg {
+                width: 22px;
+                height: 22px;
+            }
+            @include social-color('.facebook', $blueColor, none);
+            @include social-color('.instagram', $greenColor, none);
+            @include social-color('.twitter', $redColor, none);
+        }
+    }
+}
+/* End OUr Teachers */
+/* Start News */
+.news {
+    .posts {
+        .card-body {
+            position: relative;
+            .text {
+                position: absolute;
+                background-color: rgba(white, .75);
+                transform: translateY(-100%);
+                width: 100%;
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+/* End News */
+/* Start Opinions */
+.opinions {
+    background-image: url(../imgs/Opinion.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 100%;
+    .special-heading {
+        span {
+            &::before,
+            &::after {
+                background-color: $whiteColor;
+            }
+        }
+    }
+    section {
+        .according {
+            height: fit-content;
+            .accord {
+                .accordion-item {
+                    .icon {
+                        width: 40px; 
+                        height: 40px; 
+                        background-color: #4DACC0;
+                    }
+                }
+            }
+        }
+        .comments {
+            .carousel-indicators {
+                margin-bottom: -45px !important;
+                button {
+                    width: 8px;
+                    height: 8px;
+                    background-color: #214C55;
+                    border: 7px solid transparent;
+                    transition: $transition;
+                    &:hover {
+                        border-color:#214C55 ;
+                    }
+                    &.active {
+                        border-color: $whiteColor ;
+                        background-color: $whiteColor; 
+                    }
+                }
+            }
+            .carousel-inner {
+                .carousel-item {
+                    span { 
+                        font-size: 70px; 
+                    }
+                    p {
+                        @media (min-width:992px) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* End Opinions */
+

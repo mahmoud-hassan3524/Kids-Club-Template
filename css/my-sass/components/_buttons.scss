@@ -1,0 +1,10 @@
+/* Start Components */
+
+/* Main Button For Change Color of Border */
+.main-btn {
+    @include border-color('.yellowbtn', $yellowColor);
+    @include border-color('.bluebtn', $blueColor);
+    @include border-color('.redbtn', $redColor);
+    @include border-color('.greenbtn', $greenColor);
+}
+/* End Components */
